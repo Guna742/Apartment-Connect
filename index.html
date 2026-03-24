@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apartment Connect — Modern Residential Ecosystem</title>
+    <meta name="description"
+        content="Apartment Connect is the all-in-one digital apartment ecosystem platform that connects residents, staff, and management for collaboration, convenience, and community growth." />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/hero-new.css" />
+
+    <!-- React & Babel CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Framer Motion CDN -->
+    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+</head>
+
+<body>
+
+    <!-- ═══ NAVBAR ═══ -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="navbar-brand">
+            <img src="assets/logo.png" alt="Apartment Connect" class="navbar-logo">
+            <div class="brand-text-container">
+                <span class="brand-part-1">Apartment</span>
+                <span class="brand-part-2">Connect</span>
+            </div>
+        </a>
+        <ul class="navbar-menu" id="nav-menu">
+            <li class="nav-item float-item delay-1"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item float-item delay-2"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item float-item delay-3"><a href="residents.html" class="nav-link">Residents</a></li>
+            <li class="nav-item float-item delay-4"><a href="management.html" class="nav-link">Management</a></li>
+            <li class="nav-item float-item delay-5"><a href="communities.html" class="nav-link">Communities</a></li>
+            <li class="nav-item float-item delay-6"><a href="events.html" class="nav-link">Events</a></li>
+            <li class="nav-item float-item delay-8"><a href="admin.html" class="nav-link">Admin</a></li>
+            <li class="nav-item float-item delay-9"><a href="platform.html" class="nav-link">Platform</a></li>
+        </ul>
+        <a href="contact.html" class="navbar-cta hover-glow shine-effect float-item delay-10">Enquire Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- ═══ HERO (REACT MOUNT) ═══ -->
+    <div id="hero-mount"></div>
+
+    <!-- ═══ PLATFORM OVERVIEW ═══ -->
+    <section class="overview-section" id="overview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">Who It's For</span>
+                <h2 class="reveal delay-1">Built for the <span class="gradient-text">Entire Community</span></h2>
+                <p class="reveal delay-2">One platform connecting every stakeholder in the residential ecosystem — from
+                    resident to property manager.</p>
+            </div>
+            <div class="user-type-grid">
+                <div class="user-type-card student reveal delay-1 hover-float">
+                    <span class="user-icon"><span class="material-symbols-rounded">person</span></span>
+                    <h3>Residents</h3>
+                    <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1rem;">Manage your unit, pay
+                        bills,
+                        book amenities, and connect with neighbors effortlessly.</p>
+                    <div class="user-count">35K+</div>
+                    <p style="font-size:0.75rem;color:var(--text-muted);">active residents</p>
+                </div>
+                <div class="user-type-card faculty reveal delay-2 hover-float">
+                    <span class="user-icon"><span class="material-symbols-rounded">engineering</span></span>
+                    <h3>Staff</h3>
+                    <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1rem;">Manage maintenance,
+                        track
+                        complaints, and oversee daily operations in real-time.</p>
+                    <div class="user-count">2,400+</div>
+                    <p style="font-size:0.75rem;color:var(--text-muted);">staff members</p>
+                </div>
+                <div class="user-type-card admin reveal delay-3 hover-float">
+                    <span class="user-icon"><span class="material-symbols-rounded">admin_panel_settings</span></span>
+                    <h3>Managers</h3>
+                    <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1rem;">Manage the complex
+                        digitally —
+                        finances, announcements, security, and more.</p>
+                    <div class="user-count">850+</div>
+                    <p style="font-size:0.75rem;color:var(--text-muted);">administrators</p>
+                </div>
+                <div class="user-type-card startup reveal delay-4 hover-float">
+                    <span class="user-icon"><span class="material-symbols-rounded">shopping_cart</span></span>
+                    <h3>Vendors</h3>
+                    <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1rem;">Offer services, reach
+                        residents, and manage bookings directly through the platform.</p>
+                    <div class="user-count">320+</div>
+                    <p style="font-size:0.75rem;color:var(--text-muted);">partner vendors</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FEATURES ═══ -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">Features</span>
+                <h2 class="reveal delay-1">Everything Your Community <span class="gradient-text">Needs</span></h2>
+                <p class="reveal delay-2">A comprehensive suite of tools crafted for modern residential life.</p>
+            </div>
+            <div id="features-carousel-mount"></div>
+        </div>
+    </section>
+
+    <!-- ═══ STATS ═══ -->
+    <section class="stats-section" id="stats">
+        <div class="bg-orb"
+            style="width:400px;height:400px;background:var(--electric-purple);top:-100px;left:-100px;opacity:0.1;"
+            data-parallax="0.2">
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">Impact</span>
+                <h2 class="reveal delay-1">Numbers That <span class="gradient-text">Speak</span></h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card reveal delay-1 hover-float">
+                    <span class="stat-icon"><span class="material-symbols-rounded">person</span></span>
+                    <div class="stat-number" data-target="50000" data-suffix="+">0</div>
+                    <div class="stat-label">Residents Connected</div>
+                </div>
+                <div class="stat-card reveal delay-2 hover-float">
+                    <span class="stat-icon"><span class="material-symbols-rounded">location_city</span></span>
+                    <div class="stat-number" data-target="120" data-suffix="+">0</div>
+                    <div class="stat-label">Complexes Managed</div>
+                </div>
+                <div class="stat-card reveal delay-3 hover-float">
+                    <span class="stat-icon"><span class="material-symbols-rounded">engineering</span></span>
+                    <div class="stat-number" data-target="8500" data-suffix="+">0</div>
+                    <div class="stat-label">Requests Resolved</div>
+                </div>
+                <div class="stat-card reveal delay-4 hover-float">
+                    <span class="stat-icon"><span class="material-symbols-rounded">verified_user</span></span>
+                    <div class="stat-number" data-target="320" data-suffix="+">0</div>
+                    <div class="stat-label">Security Checkpoints</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CTA ═══ -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-inner">
+                <span class="section-label reveal">Ready to Transform?</span>
+                <h2 class="reveal delay-1">Your Community <span class="gradient-text">Deserves More</span></h2>
+                <p class="reveal delay-2">Join 120+ residential complexes already using Apartment Connect to build
+                    smarter, more connected lives.</p>
+                <div class="cta-buttons reveal delay-3">
+                    <a href="residents.html" class="btn btn-primary hover-glow shine-effect"><span
+                            class="material-symbols-rounded" style="font-size: 1.1em;">auto_awesome</span> Explore
+                        Features</a>
+                    <a href="contact.html" class="btn btn-secondary hover-float">For Complexes <span
+                            class="material-symbols-rounded"
+                            style="font-size: 1.1em; margin-left: 4px;">arrow_forward</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ PREMIUM SHOWCASE: TOP LAYERED WAVES (IMAGE 2 STYLE) ═══ -->
+    <section class="premium-section premium-top-waves" id="premium-top">
+        <svg class="wave-layer-top" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none">
+            <path fill="var(--prem-purple)" opacity="0.4"
+                d="M0,160 C320,300 640,-20 960,150 C1280,320 1440,160 V320 H0 Z"></path>
+            <path fill="var(--prem-blue)" opacity="0.3" d="M0,200 C480,400 960,0 1440,200 V320 H0 Z"></path>
+            <path fill="#1e1b4b" d="M0,240 C320,380 720,100 1120,300 C1440,460 1440,240 1440,240 V320 H0 Z"></path>
+        </svg>
+        <div class="premium-showcase-card dark">
+            <span class="section-label" style="color:var(--prem-purple)">Community Ecosystem</span>
+            <h2>Experience <span class="gradient-text">Seamless</span> Connectivity</h2>
+            <p>A multi-layered digital infrastructure designed to unite residents and management in one fluid
+                experience.</p>
+        </div>
+    </section>
+
+    <!-- ═══ PREMIUM SHOWCASE: FLOWING CONTOUR LINES (IMAGE 1 STYLE) ═══ -->
+    <section class="premium-section premium-contour-lines" id="premium-contours">
+        <svg class="contour-svg" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="contour-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:var(--prem-orange);stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:var(--prem-pink);stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:var(--prem-purple);stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <path class="contour-line" d="M0,100 C360,180 720,20 1080,180 C1260,260 1440,100"
+                style="animation-delay: 0s;"></path>
+            <path class="contour-line" d="M0,120 C360,200 720,40 1080,200 C1260,280 1440,120"
+                style="animation-delay: -2s;"></path>
+            <path class="contour-line" d="M0,140 C360,220 720,60 1080,220 C1260,300 1440,140"
+                style="animation-delay: -4s;"></path>
+            <path class="contour-line" d="M0,160 C360,240 720,80 1080,240 C1260,320 1440,160"
+                style="animation-delay: -6s;"></path>
+            <path class="contour-line" d="M0,180 C360,260 720,100 1080,260 C1260,340 1440,180"
+                style="animation-delay: -8s;"></path>
+        </svg>
+        <div class="premium-showcase-card light">
+            <span class="section-label" style="color:var(--prem-pink)">Smart Infrastructure</span>
+            <h2>Fluid <span class="gradient-text">Workflows</span></h2>
+            <p>Intelligent, flowing processes that adapt to your community's unique rhythm and needs.</p>
+        </div>
+    </section>
+
+    <!-- ═══ PREMIUM SHOWCASE: BOLD VIBRANT WAVES (IMAGE 3 STYLE) ═══ -->
+    <section class="premium-section premium-vibrant-waves" id="premium-vibrant">
+        <svg class="vibrant-wave-svg" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none">
+            <path class="bold-wave" fill="var(--prem-red)" opacity="0.6"
+                d="M0,100 C360,250 720,-50 1080,200 C1440,450 1440,100 V320 H0 Z"></path>
+            <path class="bold-wave" fill="var(--prem-orange)" opacity="0.5"
+                d="M0,150 C480,350 960,-100 1440,150 V320 H0 Z" style="animation-delay: -3s;"></path>
+            <path class="bold-wave" fill="var(--prem-yellow)" opacity="0.4"
+                d="M0,200 C400,100 800,400 1200,200 C1440,100 1440,200 V320 H0 Z" style="animation-delay: -6s;"></path>
+        </svg>
+        <div class="premium-showcase-card light" style="margin-bottom: 20vh;">
+            <span class="section-label" style="color:var(--prem-orange)">Join the Network</span>
+            <h2>Vibrant <span class="gradient-text">Communities</span></h2>
+            <p>Be part of a colorful, energetic network that transforms the way we live and interact together.</p>
+        </div>
+    </section>
+
+
+    <!-- ═══ TRUSTED BY MARQUEE ═══ -->
+    <section class="marquee-section" style="padding: 80px 0 0 0; background: var(--background);">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 3rem;">
+                <span class="section-label reveal">Trusted Partners</span>
+                <h2 class="reveal delay-1">Trusted by Leading <span class="gradient-text">Property Groups</span></h2>
+            </div>
+        </div>
+        <div class="marquee-wrapper reveal delay-2">
+            <div class="marquee-track">
+                <!-- Prestige Group -->
+                <div class="marquee-item" title="Prestige Group">
+                    <span class="material-symbols-rounded"
+                        style="font-size: 2.2rem; color: var(--primary);">apartment</span>
+                    <span>Prestige Group</span>
+                </div>
+                <!-- Brigade Group -->
+                <div class="marquee-item" title="Brigade Group">
+                    <span class="material-symbols-rounded"
+                        style="font-size: 2.2rem; color: var(--primary);">home_work</span>
+                    <span>Brigade Group</span>
+                </div>
+                <!-- Sobha Realty -->
+                <div class="marquee-item" title="Sobha Realty">
+                    <span class="material-symbols-rounded"
+                        style="font-size: 2.2rem; color: var(--primary);">location_city</span>
+                    <span>Sobha Realty</span>
+                </div>
+                <!-- Godrej Properties -->
+                <div class="marquee-item" title="Godrej Properties">
+                    <span class="material-symbols-rounded"
+                        style="font-size: 2.2rem; color: var(--primary);">domain</span>
+                    <span>Godrej Properties</span>
+                </div>
+                <!-- DLF Limited -->
+                <div class="marquee-item" title="DLF Limited">
+                    <span class="material-symbols-rounded"
+                        style="font-size: 2.2rem; color: var(--primary);">villa</span>
+                    <span>DLF Limited</span>
+                </div>
+
+                <!-- Repeat for seamless loop -->
+                <div class="marquee-item" title="Prestige Group">
+                    <span class="material-symbols-rounded"
+                        style="font-size: 2.2rem; color: var(--primary);">apartment</span>
+                    <span>Prestige Group</span>
+                </div>
+                <div class="marquee-item" title="Brigade Group">
+                    <span class="material-symbols-rounded"
+                        style="font-size: 2.2rem; color: var(--primary);">home_work</span>
+                    <span>Brigade Group</span>
+                </div>
+                <div class="marquee-item" title="Sobha Realty">
+                    <span class="material-symbols-rounded"
+                        style="font-size: 2.2rem; color: var(--primary);">location_city</span>
+                    <span>Sobha Realty</span>
+                </div>
+                <div class="marquee-item" title="Godrej Properties">
+                    <span class="material-symbols-rounded"
+                        style="font-size: 2.2rem; color: var(--primary);">domain</span>
+                    <span>Godrej Properties</span>
+                </div>
+                <div class="marquee-item" title="DLF Limited">
+                    <span class="material-symbols-rounded"
+                        style="font-size: 2.2rem; color: var(--primary);">villa</span>
+                    <span>DLF Limited</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODERN FOOTER -->
+    <footer class="modern-footer">
+        <div class="footer-contour-bg">
+            <svg class="contour-svg" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+                <path class="contour-line" d="M0,100 C360,180 720,20 1080,180 C1260,260 1440,100"
+                    style="animation-delay: 0s;"></path>
+                <path class="contour-line" d="M0,120 C360,200 720,40 1080,200 C1260,280 1440,120"
+                    style="animation-delay: -2s;"></path>
+                <path class="contour-line" d="M0,140 C360,220 720,60 1080,220 C1260,300 1440,140"
+                    style="animation-delay: -4s;"></path>
+            </svg>
+        </div>
+
+        <div class="container">
+            <div class="footer-layout-wrapper">
+                <!-- LEFT COLUMN: Contact & Socials -->
+                <div class="footer-col-left">
+                    <div class="footer-contact-info">
+                        <h3>Contact</h3>
+                        <p>91SpringBoard, Koramangala<br>Bengaluru, India 560034</p>
+                        <p style="margin-top: 1.5rem;">+91 98765 43210</p>
+                        <p><a href="mailto:hello@apartmentconnect.io">hello@apartmentconnect.io</a></p>
+                    </div>
+
+                    <div class="footer-social-links">
+                        <h3>Follow Us</h3>
+                        <a href="#">Facebook <span class="arrow">↗</span></a>
+                        <a href="#">Instagram <span class="arrow">↗</span></a>
+                        <a href="#">LinkedIn <span class="arrow">↗</span></a>
+                    </div>
+                </div>
+
+                <!-- CENTER COLUMN: Logo, Brand, Tagline, Buttons -->
+                <div class="footer-col-center">
+                    <div class="footer-logo-large">
+                        <img src="assets/bgrmlogo.png" alt="Apartment Connect">
+                    </div>
+                    <h2 class="footer-brand-name">Apartment <span class="accent-text">Connect</span></h2>
+                    <p class="footer-tagline">"Connecting Every Community Digitally"</p>
+                    <div class="footer-action-buttons">
+                        <a href="contact.html" class="btn-footer primary">Enquire Now</a>
+                        <a href="about.html" class="btn-footer secondary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN: Platform, Legal Pill -->
+                <div class="footer-col-right">
+                    <div class="footer-nav-links">
+                        <h3>Platform</h3>
+                        <ul>
+                            <li><a href="residents.html">Residents</a></li>
+                            <li><a href="management.html">Management</a></li>
+                            <li><a href="communities.html">Communities</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="admin.html">Admin</a></li>
+                            <li><a href="platform.html">Features</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-legal-pill">
+                        <a href="#">Cookies policy</a>
+                        <a href="#">Privacy policy</a>
+                        <span>© 2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══ REACT COMPONENTS (INLINED FOR LOCAL SUPPORT) ═══ -->
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+        const { motion, useMotionValue, useTransform, useSpring, AnimatePresence } = window.Motion ? window.Motion : FramerMotion;
+
+        // ─── HERO COMPONENT (NEW) ───
+        const HeroSocialMedia = () => {
+            const containerRef = useRef(null);
+
+            // Floating Animation Variants
+            const floatVariants = {
+                animate: (i) => ({
+                    y: [0, i % 2 === 0 ? -15 : 15, 0],
+                    transition: {
+                        duration: 3 + (i % 3),
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: i * 0.2
+                    }
+                })
+            };
+
+            const floatingElements = [
+                { id: 1, type: 'card', pos: 'pos-top-left-1', content: 'Resident Dashboard', img: 'assets/hero_resident.png' },
+                { id: 2, type: 'card', pos: 'pos-top-left-2', content: 'Visitor Hub', img: 'assets/hero_maintenance.png' },
+                { id: 3, type: 'card', pos: 'pos-bottom-left-1', content: 'Maintenance Tracking', img: 'assets/hero_maintenance.png' },
+                { id: 4, type: 'icon', pos: 'icon-pos-1', svg: '<svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.86-.6-4.06-1.4-1.12-.76-2-1.85-2.48-3.11-.03 2.58-.02 5.16-.02 7.74 0 1.25-.21 2.54-.78 3.66-.63 1.25-1.74 2.29-3.08 2.73-1.14.39-2.41.44-3.59.13-1.34-.33-2.58-1.14-3.41-2.26-1.01-1.33-1.42-3.1-1.15-4.74.24-1.46 1.01-2.87 2.21-3.79 1.15-.89 2.65-1.34 4.12-1.22.11 1.73-.24 3.51-.95 5.1-.38-.64-1.03-1.11-1.77-1.27-.85-.18-1.83-.02-2.53.51-.69.52-1.11 1.34-1.11 2.19 0 .89.47 1.74 1.22 2.22.7.46 1.58.6 2.41.36.79-.22 1.48-.79 1.83-1.52.18-.38.28-.8.27-1.22-.01-4.74-.01-9.48-.02-14.22Z"/></svg>', color: '#000000' },
+                { id: 5, type: 'icon', pos: 'icon-pos-5', svg: '<svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM9.99 15V9l5.19 3-5.19 3z"/></svg>', color: '#FF0000' },
+                { id: 6, type: 'icon', pos: 'icon-pos-2', svg: '<svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M7.75 2h8.5C19.42 2 22 4.58 22 7.75v8.5c0 3.17-2.58 5.75-5.75 5.75h-8.5C4.58 22 2 19.42 2 16.25v-8.5C2 4.58 4.58 2 7.75 2Zm0 1.5c-2.35 0-4.25 1.9-4.25 4.25v8.5c0 2.35 1.9 4.25 4.25 4.25h8.5c2.35 0 4.25-1.9 4.25-4.25v-8.5c0-2.35-1.9-4.25-4.25-4.25h-8.5Zm8.5 2a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/></svg>', color: '#E4405F' },
+                { id: 7, type: 'icon', pos: 'icon-pos-3', svg: '<svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"/></svg>', color: '#0A66C2' },
+                { id: 8, type: 'icon', pos: 'icon-pos-4', svg: '<svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>', color: '#000000' },
+                { id: 9, type: 'card', pos: 'pos-top-right-1', content: 'Management Panel', img: 'assets/hero_admin.png' },
+                { id: 10, type: 'card', pos: 'pos-top-right-2', content: 'Community Events', img: 'assets/hero_events.png' },
+                { id: 11, type: 'card', pos: 'pos-bottom-right-1', content: 'Security Status', img: 'assets/hero_admin.png' },
+                { id: 12, type: 'card', pos: 'pos-bottom-right-2', content: 'Community Inbox', img: 'assets/hero_resident.png' }
+            ];
+
+            return (
+                <section ref={containerRef} className="hero-new">
+                    {/* Background Watermark Logo */}
+                    <div className="hero-background-watermark">
+                        <img src="assets/logo.png" alt="" style={{ width: '100%', height: 'auto' }} />
+                    </div>
+
+                    {/* Connecting Lines SVG */}
+                    <svg className="connecting-svg">
+                        <path className="connecting-line" d="M 50% 50% L 15% 20%" />
+                        <path className="connecting-line" d="M 50% 50% L 20% 40%" />
+                        <path className="connecting-line" d="M 50% 50% L 10% 70%" />
+                        <path className="connecting-line" d="M 50% 50% L 85% 20%" />
+                        <path className="connecting-line" d="M 50% 50% L 80% 40%" />
+                        <path className="connecting-line" d="M 50% 50% L 90% 70%" />
+                    </svg>
+
+                    <div className="container">
+                        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+                            <div className="hero-center-logo">
+                                <img src="assets/logo.png" alt="Apartment Connect" style={{ width: '40px', height: 'auto' }} />
+                            </div>
+                            <h1 style={{ fontFamily: 'var(--font-heading)' }}>
+                                Connecting Every <br />
+                                <span className="gradient-text-purple">Community Digitally</span>
+                            </h1>
+                            <p className="hero-subtitle">
+                                The all-in-one digital ecosystem that unites residents, staff, and management <br />
+                                for collaboration, convenience, and community growth.
+                            </p>
+
+                            <div className="user-avatars">
+                                {[1, 2, 3, 4, 5].map(i => (
+                                    <div key={i} className="user-avatar">
+                                        <img src={`https://i.pravatar.cc/150?u=apt${i}`} alt="user" />
+                                    </div>
+                                ))}
+                                <span className="trusted-text">35K+ connected residents</span>
+                            </div>
+
+                            <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
+                                <a href="contact.html" className="btn-get-started">Enquire Now</a>
+                                <a href="about.html" className="btn-secondary" style={{ padding: '0.85rem 2.5rem', borderRadius: '50px', display: 'flex', alignItems: 'center' }}>Learn More</a>
+                            </div>
+                            <p className="hero-footer-text">Empowering 120+ modern residential complexes.</p>
+                        </motion.div>
+                    </div>
+
+                    {/* Floating Elements */}
+                    {floatingElements.map((el, i) => (
+                        <motion.div
+                            key={el.id}
+                            custom={i}
+                            variants={floatVariants}
+                            animate="animate"
+                            className={`floating-element ${el.pos}`}
+                        >
+                            {el.type === 'card' ? (
+                                <div className="card-preview">
+                                    <div style={{ fontSize: '0.8rem', fontWeight: 700, marginBottom: '0.5rem' }}>{el.content}</div>
+                                    <img src={el.img} alt="preview" />
+                                </div>
+                            ) : (
+                                <div className="icon-pod">
+                                    <div dangerouslySetInnerHTML={{ __html: el.svg }} style={{ color: el.color, display: 'flex' }} />
+                                </div>
+                            )}
+                        </motion.div>
+                    ))}
+                </section>
+            );
+        };
+
+        // ─── FEATURES CAROUSEL COMPONENT ───
+        const featuresData = [
+            { id: 1, title: "Community Feed", desc: "Stay updated with complex news, security alerts, and neighborly discussions tailored to your block.", icon: "newspaper", background: "linear-gradient(135deg, #FF3131 0%, #FF914D 100%)" }, // Red-Orange
+            { id: 2, title: "Maintenance Desk", desc: "Raise service requests, track fixes, and provide feedback directly to the maintenance team.", icon: "engineering", background: "linear-gradient(135deg, #FF914D 0%, #FFDE59 100%)" }, // Orange-Yellow
+            { id: 3, title: "Billing & Payments", desc: "Pay maintenance fees, electricity bills, and amenity charges through a secure gateway.", icon: "account_balance_wallet", background: "linear-gradient(135deg, #FFDE59 0%, #7ED957 100%)" }, // Yellow-Green
+            { id: 4, title: "Resident Groups", desc: "Join hobby clubs, carpool groups, and interest communities in a single networked space.", icon: "groups", background: "linear-gradient(135deg, #7ED957 0%, #5271FF 100%)" }, // Green-Blue
+            { id: 5, title: "Amenities Booking", desc: "Discover and book clubhouses, gyms, and halls with real-time availability tracking.", icon: "calendar_today", background: "linear-gradient(135deg, #5271FF 0%, #8C52FF 100%)" }, // Blue-Purple
+            { id: 6, title: "Visitor Management", desc: "Pre-approve guests, track delivery staff, and ensure a secure environment for your family.", icon: "verified_user", background: "linear-gradient(135deg, #8C52FF 0%, #FF3131 100%)" } // Purple-Red
+        ];
+
+        const FeaturesCarousel = () => {
+            const [currentIndex, setCurrentIndex] = useState(0);
+            const [isHovered, setIsHovered] = useState(false);
+            useEffect(() => {
+                if (isHovered) return;
+                const interval = setInterval(() => setCurrentIndex(prev => (prev + 1) % featuresData.length), 3000);
+                return () => clearInterval(interval);
+            }, [isHovered]);
+
+            const getOffset = (idx) => {
+                let off = idx - currentIndex;
+                const half = Math.floor(featuresData.length / 2);
+                if (off > half) off -= featuresData.length;
+                if (off < -half) off += featuresData.length;
+                return off;
+            };
+
+            return (
+                <div style={{ position: "relative", height: "520px", width: "100%", overflow: "hidden", perspective: "1500px", padding: "40px 0" }} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+                    <div style={{ position: "absolute", top: "50%", left: "50%", width: "340px", height: "380px", transform: "translate(-50%, -50%)", transformStyle: "preserve-3d" }}>
+                        <AnimatePresence initial={false}>
+                            {featuresData.map((feature, idx) => {
+                                const offset = getOffset(idx);
+                                const isCenter = offset === 0;
+                                const absOffset = Math.abs(offset);
+
+                                // Enhanced logic for "fully" showing side cards
+                                // Spread them out more (280px instead of 240px)
+                                const x = offset * 300;
+                                // Reduce rotation so they aren't "half" visible due to slant
+                                const rotateY = offset * -15;
+                                // Larger scale for side cards
+                                const scale = 1 - absOffset * 0.1;
+                                const z = absOffset * -150;
+                                // Higher opacity for all visible cards
+                                const opacity = absOffset > 2 ? 0 : 1;
+
+                                return (
+                                    <motion.div
+                                        key={feature.id}
+                                        animate={{
+                                            x,
+                                            rotateY,
+                                            scale,
+                                            z,
+                                            opacity,
+                                            zIndex: 10 - absOffset
+                                        }}
+                                        transition={{
+                                            duration: 0.8,
+                                            ease: [0.4, 0, 0.2, 1]
+                                        }}
+                                        style={{
+                                            position: "absolute",
+                                            top: 0,
+                                            left: 0,
+                                            width: "100%",
+                                            height: "100%",
+                                            borderRadius: "28px",
+                                            background: feature.background,
+                                            padding: "2.5rem 2rem",
+                                            display: "flex",
+                                            flexDirection: "column",
+                                            alignItems: "center",
+                                            textAlign: "center",
+                                            boxShadow: isCenter ? "0 25px 50px rgba(0,0,0,0.3)" : "0 15px 35px rgba(0,0,0,0.2)",
+                                            cursor: "pointer",
+                                            backfaceVisibility: "hidden",
+                                            border: "1px solid rgba(255,255,255,0.1)"
+                                        }}
+                                        onClick={() => setCurrentIndex(idx)}
+                                    >
+                                        <div style={{ width: "80px", height: "80px", borderRadius: "22px", background: "rgba(255, 255, 255, 0.25)", border: "1px solid rgba(255, 255, 255, 0.45)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1.5rem", boxShadow: "0 10px 20px rgba(0,0,0,0.1)" }}>
+                                            <span style={{ fontFamily: "'Material Symbols Rounded'", fontSize: "2.5rem", color: "#FFF" }}>{feature.icon}</span>
+                                        </div>
+                                        <h3 style={{ fontSize: "1.6rem", fontWeight: 800, color: "#FFF", marginBottom: "1rem", textShadow: "0 2px 4px rgba(0,0,0,0.2)" }}>{feature.title}</h3>
+                                        <p style={{ fontSize: "1rem", color: "rgba(255, 255, 255, 0.98)", lineHeight: "1.5", fontWeight: 500 }}>{feature.desc}</p>
+                                    </motion.div>
+                                );
+                            })}
+                        </AnimatePresence>
+                    </div>
+                </div>
+            );
+        };
+
+        // ─── MOUNTING ───
+        const heroRoot = ReactDOM.createRoot(document.getElementById('hero-mount'));
+        heroRoot.render(<HeroSocialMedia />);
+        const featRoot = ReactDOM.createRoot(document.getElementById('features-carousel-mount'));
+        featRoot.render(<FeaturesCarousel />);
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

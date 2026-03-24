@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Complex Platform — Apartment Connect</title>
+    <meta name="description"
+        content="Apartment Connect's super-admin multi-complex platform enables management groups to govern and scale digital residential experiences across their entire portfolio." />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- React & Babel CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="navbar-brand">
+            <img src="assets/logo.png" alt="Apartment Connect" class="navbar-logo">
+            <div class="brand-text-container">
+                <span class="brand-part-1">Apartment</span>
+                <span class="brand-part-2">Connect</span>
+            </div>
+        </a>
+        <ul class="navbar-menu" id="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="residents.html" class="nav-link">Residents</a></li>
+            <li><a href="management.html" class="nav-link">Management</a></li>
+            <li><a href="communities.html" class="nav-link">Communities</a></li>
+            <li><a href="events.html" class="nav-link">Events</a></li>
+            <li><a href="admin.html" class="nav-link">Admin</a></li>
+            <li><a href="platform.html" class="nav-link">Platform</a></li>
+        </ul>
+        <a href="contact.html" class="nav-link navbar-cta">Enquire Now</a>
+        <button class="hamburger" id="hamburger"
+            aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </nav>
+
+    <section class="page-hero">
+        <div class="hero-wave-container">
+            <svg class="hero-wave-svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path class="hero-wave-layer-1" d="M0,160 C320,300 640,-20 960,150 C1280,320 1440,160 V320 H0 Z"></path>
+                <path class="hero-wave-layer-2" d="M0,200 C480,400 960,0 1440,200 V320 H0 Z"></path>
+                <path class="hero-wave-layer-3" d="M0,240 C320,380 720,100 1120,300 C1440,460 1440,240 1440,240 V320 H0 Z"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="section-label reveal">For Property Management Groups</span>
+                <h1 class="reveal delay-1">One Platform, <span class="gradient-text">Unlimited Complexes</span></h1>
+                <p class="reveal delay-2">The super-admin control layer for real estate groups, developers, and
+                    multi-complex networks — governance, insights, and portfolio oversight at scale.</p>
+                <div style="display:flex;gap:2rem;justify-content:center;margin-top:2.5rem;flex-wrap:wrap;"
+                    class="reveal delay-3">
+                    <div style="text-align:center;">
+                        <div class="stat-number" data-target="120" data-suffix="+">0</div>
+                        <div class="stat-label">Complexes Live</div>
+                    </div>
+                    <div style="text-align:center;">
+                        <div class="stat-number" data-target="15" data-suffix="+">0</div>
+                        <div class="stat-label">Management Groups</div>
+                    </div>
+                    <div style="text-align:center;">
+                        <div class="stat-number" data-target="3" data-suffix=" Regions">0</div>
+                        <div class="stat-label">Active In</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLATFORM ARCHITECTURE -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">Architecture</span>
+                <h2 class="reveal delay-1">A Layered Ecosystem <span class="gradient-text">Built to Scale</span></h2>
+            </div>
+            <div class="architecture-layers">
+                <div class="glass-card-premium layer-card tier-1 reveal delay-1">
+                    <div
+                        style="min-width:60px;height:60px;border-radius:18px;background:var(--gradient-primary);display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex-shrink:0;">
+                        <span class="material-symbols-rounded" style="color: white; font-size: 2rem;">corporate_fare</span>
+                    </div>
+                    <div style="flex:1;">
+                        <h3 style="margin-bottom:0.6rem;">Group Super Admin Layer</h3>
+                        <p style="font-size:0.9rem;">Portfolio-level oversight with cross-complex analytics, corporate governance
+                            tools, and global security config. Manage all properties from a single pane of glass.
+                        </p>
+                    </div>
+                    <div class="tag tag-purple" style="white-space:nowrap;flex-shrink:0;">Level 1</div>
+                </div>
+                <div class="glass-card-premium layer-card tier-2 reveal delay-2">
+                    <div
+                        style="min-width:60px;height:60px;border-radius:18px;background:var(--gradient-coral);display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex-shrink:0;">
+                        <span class="material-symbols-rounded"
+                            style="color: white; font-size: 2rem;">apartment</span>
+                    </div>
+                    <div style="flex:1;">
+                        <h3 style="margin-bottom:0.6rem;">Property Manager Layer</h3>
+                        <p style="font-size:0.9rem;">Per-complex administration for maintenance, facilities, resident
+                            management, and security moderation. Full local control with group policies.</p>
+                    </div>
+                    <div class="tag tag-blue" style="white-space:nowrap;flex-shrink:0;">Level 2</div>
+                </div>
+                <div class="glass-card-premium layer-card tier-3 reveal delay-3">
+                    <div
+                        style="min-width:60px;height:60px;border-radius:18px;background:var(--gradient-mint);display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex-shrink:0;">
+                        <span class="material-symbols-rounded" style="color: white; font-size: 2rem;">person</span>
+                    </div>
+                    <div style="flex:1;">
+                        <h3 style="margin-bottom:0.6rem;">Resident & Staff Layer</h3>
+                        <p style="font-size:0.9rem;">End-user experience — focused on convenience, security, and community.
+                            All activity flows up to local and group dashboards in real time.</p>
+                    </div>
+                    <div class="tag tag-mint" style="white-space:nowrap;flex-shrink:0;">Level 3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANIMATED NETWORK -->
+    <section id="network-map"
+        style="background:var(--background);position:relative;overflow:hidden;padding-top:100px;">
+        <div class="container" style="position:relative;z-index:2;">
+            <div class="grid-2" style="align-items:center;gap:5rem;">
+                <div class="reveal-left">
+                    <span class="section-label">Network Map</span>
+                    <h2 style="margin-bottom:1.25rem;">A Living <span class="gradient-text">Residential Network</span></h2>
+                    <p style="margin-bottom:1.5rem;">Every complex on the platform is connected — sharing vendor pools,
+                        service standards, and portfolio analytics while maintaining individual identity.</p>
+                    <div style="display:flex;flex-direction:column;gap:1rem;">
+                        <div class="highlight-box hover-pulse-expand" style="display:flex;gap:1rem;align-items:center;">
+                            <span class="material-symbols-rounded"
+                                style="font-size:2rem;color:var(--neon-blue)">link</span>
+                            <div><strong style="color:var(--text-primary);display:block;">Cross-Campus Visibility</strong>
+                                <p style="font-size:0.85rem;margin-top:0.1rem;">Residents discover reliable vendors 
+                                    vetted across the entire property management network.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-box hover-pulse-expand" style="display:flex;gap:1rem;align-items:center;">
+                            <span class="material-symbols-rounded"
+                                style="font-size:2rem;color:var(--electric-purple-light)">track_changes</span>
+                            <div><strong style="color:var(--text-primary);display:block;">Shared Talent Pool</strong>
+                                <p style="font-size:0.85rem;margin-top:0.1rem;">Trustworthy vendors and staff can 
+                                    serve multiple partner complexes with unified ratings.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-box hover-pulse-expand" style="display:flex;gap:1rem;align-items:center;">
+                            <span class="material-symbols-rounded"
+                                style="font-size:2rem;color:var(--soft-coral)">analytics</span>
+                            <div><strong style="color:var(--text-primary);display:block;">Consolidated Analytics</strong>
+                                <p style="font-size:0.85rem;margin-top:0.1rem;">Portfolio-wide dashboards with
+                                    drill-down by complex, block, or service type.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-right network-card-glow" style="position:relative;height:380px;">
+                    <canvas id="network-canvas" style="height:380px;"></canvas>
+                    <div
+                        style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none;">
+                        <div class="material-symbols-rounded"
+                            style="font-size:3rem;margin-bottom:0.3rem;color:var(--neon-blue)">language</div>
+                        <div style="font-family:var(--font-accent);font-size:0.75rem;color:var(--text-secondary);">Residential
+                            Network</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUPER ADMIN FEATURES -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">Super Admin</span>
+                <h2 class="reveal delay-1">Platform <span class="gradient-text">Governance</span> Features</h2>
+            </div>
+            <!-- React mount for animated governance cards -->
+            <div id="governance-cards-mount"></div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background:var(--gradient-card);padding:80px 0;">
+        <div class="container">
+            <div style="text-align:center;max-width:640px;margin:0 auto;">
+                <span class="section-label reveal">Join the Network</span>
+                <h2 class="reveal delay-1">Ready to Transform Your <span class="gradient-text">Property
+                        Portfolio?</span></h2>
+                <p class="reveal delay-2" style="margin-bottom:2.5rem;">Talk to our enterprise team about a custom
+                    multi-complex deployment for your management group.</p>
+                <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;" class="reveal delay-3">
+                    <a href="contact.html" class="btn btn-primary">Schedule a Platform Demo</a>
+                    <a href="about.html" class="btn btn-secondary">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ═══ TRUSTED BY MARQUEE ═══ -->
+    <section class="marquee-section" style="padding: 80px 0 0 0; background: var(--background);">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 3rem;">
+                <span class="section-label reveal">Trusted Partners</span>
+                <h2 class="reveal delay-1">Trusted by Leading <span class="gradient-text">Property Groups</span></h2>
+            </div>
+        </div>
+        <div class="marquee-wrapper reveal delay-2">
+            <div class="marquee-track">
+                <!-- Prestige Group -->
+                <div class="marquee-item" title="Prestige Group">
+                    <span class="material-symbols-rounded" style="font-size: 2.2rem; color: var(--primary);">apartment</span>
+                    <span>Prestige Group</span>
+                </div>
+                <!-- Brigade Group -->
+                <div class="marquee-item" title="Brigade Group">
+                    <span class="material-symbols-rounded" style="font-size: 2.2rem; color: var(--primary);">home_work</span>
+                    <span>Brigade Group</span>
+                </div>
+                <!-- Sobha Realty -->
+                <div class="marquee-item" title="Sobha Realty">
+                    <span class="material-symbols-rounded" style="font-size: 2.2rem; color: var(--primary);">location_city</span>
+                    <span>Sobha Realty</span>
+                </div>
+                <!-- Godrej Properties -->
+                <div class="marquee-item" title="Godrej Properties">
+                    <span class="material-symbols-rounded" style="font-size: 2.2rem; color: var(--primary);">domain</span>
+                    <span>Godrej Properties</span>
+                </div>
+                <!-- DLF Limited -->
+                <div class="marquee-item" title="DLF Limited">
+                    <span class="material-symbols-rounded" style="font-size: 2.2rem; color: var(--primary);">villa</span>
+                    <span>DLF Limited</span>
+                </div>
+
+                <!-- Repeat for seamless loop -->
+                <div class="marquee-item" title="Prestige Group">
+                    <span class="material-symbols-rounded" style="font-size: 2.2rem; color: var(--primary);">apartment</span>
+                    <span>Prestige Group</span>
+                </div>
+                <div class="marquee-item" title="Brigade Group">
+                    <span class="material-symbols-rounded" style="font-size: 2.2rem; color: var(--primary);">home_work</span>
+                    <span>Brigade Group</span>
+                </div>
+                <div class="marquee-item" title="Sobha Realty">
+                    <span class="material-symbols-rounded" style="font-size: 2.2rem; color: var(--primary);">location_city</span>
+                    <span>Sobha Realty</span>
+                </div>
+                <div class="marquee-item" title="Godrej Properties">
+                    <span class="material-symbols-rounded" style="font-size: 2.2rem; color: var(--primary);">domain</span>
+                    <span>Godrej Properties</span>
+                </div>
+                <div class="marquee-item" title="DLF Limited">
+                    <span class="material-symbols-rounded" style="font-size: 2.2rem; color: var(--primary);">villa</span>
+                    <span>DLF Limited</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODERN FOOTER -->
+    <footer class="modern-footer">
+        <div class="footer-contour-bg">
+            <svg class="contour-svg" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+                <path class="contour-line" d="M0,100 C360,180 720,20 1080,180 C1260,260 1440,100" style="animation-delay: 0s;"></path>
+                <path class="contour-line" d="M0,120 C360,200 720,40 1080,200 C1260,280 1440,120" style="animation-delay: -2s;"></path>
+                <path class="contour-line" d="M0,140 C360,220 720,60 1080,220 C1260,300 1440,140" style="animation-delay: -4s;"></path>
+            </svg>
+        </div>
+
+        <div class="container">
+            <div class="footer-layout-wrapper">
+                <!-- LEFT COLUMN: Contact & Socials -->
+                <div class="footer-col-left">
+                    <div class="footer-contact-info">
+                        <h3>Contact</h3>
+                        <p>91SpringBoard, Koramangala<br>Bengaluru, India 560034</p>
+                        <p style="margin-top: 1.5rem;">+91 98765 43210</p>
+                        <p><a href="mailto:hello@apartmentconnect.io">hello@apartmentconnect.io</a></p>
+                    </div>
+
+                    <div class="footer-social-links">
+                        <h3>Follow Us</h3>
+                        <a href="#">Facebook <span class="arrow">↗</span></a>
+                        <a href="#">Instagram <span class="arrow">↗</span></a>
+                        <a href="#">LinkedIn <span class="arrow">↗</span></a>
+                    </div>
+                </div>
+
+                <!-- CENTER COLUMN: Logo, Brand, Tagline, Buttons -->
+                <div class="footer-col-center">
+                    <div class="footer-logo-large">
+                        <img src="assets/bgrmlogo.png" alt="Apartment Connect">
+                    </div>
+                    <h2 class="footer-brand-name">Apartment <span class="accent-text">Connect</span></h2>
+                    <p class="footer-tagline">"Connecting Every Community Digitally"</p>
+                    <div class="footer-action-buttons">
+                        <a href="contact.html" class="btn-footer primary">Enquire Now</a>
+                        <a href="about.html" class="btn-footer secondary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN: Platform, Legal Pill -->
+                <div class="footer-col-right">
+                    <div class="footer-nav-links">
+                        <h3>Platform</h3>
+                        <ul>
+                            <li><a href="residents.html">Residents</a></li>
+                            <li><a href="management.html">Management</a></li>
+                            <li><a href="communities.html">Communities</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="admin.html">Admin</a></li>
+                            <li><a href="platform.html">Features</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-legal-pill">
+                        <a href="#">Cookies policy</a>
+                        <a href="#">Privacy policy</a>
+                        <span>© 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+    <!-- ═══ REACT: GOVERNANCE CARDS WITH AURORA BLOB BACKGROUND ═══ -->
+    <script type="text/babel">
+        const { useEffect, useRef } = React;
+
+        const governanceCards = [
+            {
+                icon: 'domain_add',
+                title: 'Property Onboarding',
+                desc: 'Onboard new complexes to the network in under 30 minutes with guided unit mapping and automated staff provisioning.',
+                delay: 'delay-1',
+                // coral/orange → pink palette
+                colors: [
+                    { r: 255, g: 80,  b: 50  },  // deep coral
+                    { r: 255, g: 150, b: 100 },  // soft orange
+                    { r: 220, g: 50,  b: 120 },  // magenta-pink
+                ],
+                ringColor: 'rgba(255,100,60,0.55)',
+                iconColor: 'var(--soft-coral)'
+            },
+            {
+                icon: 'enhanced_encryption',
+                title: 'Policy Management',
+                desc: 'Set platform policies, security protocols, and amenity access levels across all complexes in the network.',
+                delay: 'delay-2',
+                // purple/indigo palette
+                colors: [
+                    { r: 130, g: 40,  b: 220 },  // electric purple
+                    { r: 180, g: 80,  b: 255 },  // violet
+                    { r: 60,  g: 20,  b: 160 },  // deep indigo
+                ],
+                ringColor: 'rgba(150,60,240,0.55)',
+                iconColor: 'var(--electric-purple-light)'
+            },
+            {
+                icon: 'analytics',
+                title: 'Network Analytics',
+                desc: 'Aggregate data across all properties for benchmarking, reporting to stakeholders, and financial planning.',
+                delay: 'delay-3',
+                // blue/cyan palette
+                colors: [
+                    { r: 0,   g: 120, b: 255 },  // neon blue
+                    { r: 0,   g: 200, b: 240 },  // cyan
+                    { r: 30,  g: 60,  b: 200 },  // deep blue
+                ],
+                ringColor: 'rgba(0,160,255,0.55)',
+                iconColor: 'var(--neon-blue)'
+            },
+            {
+                icon: 'verified_user',
+                title: 'Compliance Tools',
+                desc: 'Local housing laws, GDPR, and security standards built in. Audit logs, data residency controls, and privacy dashboards included.',
+                delay: 'delay-4',
+                // mint/green palette
+                colors: [
+                    { r: 0,   g: 200, b: 140 },  // mint green
+                    { r: 80,  g: 220, b: 100 },  // lime green
+                    { r: 0,   g: 160, b: 180 },  // teal
+                ],
+                ringColor: 'rgba(0,200,140,0.55)',
+                iconColor: 'var(--mint-green)'
+            }
+        ];
+
+        // Individual card with aurora canvas blob background
+        const AuroraCard = ({ card, index }) => {
+            const cardRef   = useRef(null);
+            const canvasRef = useRef(null);
+            const animRef   = useRef(null);
+            const tRef      = useRef(Math.random() * Math.PI * 2);
+
+            useEffect(() => {
+                // Manually trigger intersection observer 'visible' class
+                const revealTimeout = setTimeout(() => {
+                    if (cardRef.current) {
+                        cardRef.current.classList.add('visible');
+                    }
+                }, 100 + index * 100);
+
+                const canvas = canvasRef.current;
+                if (!canvas) return;
+                const ctx = canvas.getContext('2d');
+
+                const resize = () => {
+                    canvas.width  = canvas.offsetWidth;
+                    canvas.height = canvas.offsetHeight;
+                };
+                resize();
+                window.addEventListener('resize', resize);
+
+                const blobs = card.colors.map((col, i) => ({
+                    col,
+                    // stagger positions so they orbit
+                    phase: (i / card.colors.length) * Math.PI * 2,
+                    radius: 0.28 + i * 0.04,   // relative to canvas size
+                    speed: 0.008 + i * 0.003,
+                    amplitude: 0.12 + i * 0.04
+                }));
+
+                const draw = () => {
+                    const w = canvas.width;
+                    const h = canvas.height;
+                    const cx = w * 0.5;
+                    const cy = h * 0.5;
+                    const t = tRef.current;
+
+                    if (w === 0 || h === 0) {
+                        animRef.current = requestAnimationFrame(draw);
+                        return;
+                    }
+
+                    ctx.clearRect(0, 0, w, h);
+
+                    // ── 1. Draw soft aurora blobs ──
+                    blobs.forEach((blob, i) => {
+                        const angle = t * blob.speed * 60 + blob.phase;
+                        const bx = cx + Math.cos(angle) * w * blob.amplitude;
+                        const by = cy + Math.sin(angle * 0.7) * h * blob.amplitude * 0.7;
+                        const br = Math.min(w, h) * blob.radius;
+
+                        const blobColor = blob.col;
+                        const grad = ctx.createRadialGradient(bx, by, 0, bx, by, br);
+                        grad.addColorStop(0,   `rgba(${blobColor.r},${blobColor.g},${blobColor.b},0.55)`);
+                        grad.addColorStop(0.5, `rgba(${blobColor.r},${blobColor.g},${blobColor.b},0.25)`);
+                        grad.addColorStop(1,   `rgba(${blobColor.r},${blobColor.g},${blobColor.b},0)`);
+
+                        ctx.save();
+                        // Use a fallback for ctx.filter support if needed
+                        if (ctx.filter) ctx.filter = 'blur(18px)';
+                        ctx.fillStyle = grad;
+                        ctx.beginPath();
+                        ctx.ellipse(bx, by, br * 1.3, br, angle * 0.3, 0, Math.PI * 2);
+                        ctx.fill();
+                        ctx.restore();
+                    });
+
+                    // ── 2. Oscillating sine-wave ellipse rings ──
+                    const baseColor = card.colors[0];
+                    const ringCount = 5;
+                    for (let ri = 0; ri < ringCount; ri++) {
+                        const progress = ri / ringCount;
+                        const ringRadius = Math.min(w, h) * (0.1 + progress * 0.38);
+                        const pulseScale = 1 + 0.04 * Math.sin(t * 1.5 + ri * 0.8);
+                        const alpha = (0.35 - progress * 0.06) * (0.7 + 0.3 * Math.sin(t * 2 + ri));
+
+                        ctx.save();
+                        ctx.strokeStyle = `rgba(${baseColor.r},${baseColor.g},${baseColor.b},${alpha})`;
+                        ctx.lineWidth = 0.8;
+                        ctx.beginPath();
+                        ctx.ellipse(
+                            cx, cy,
+                            ringRadius * pulseScale * 1.4,
+                            ringRadius * pulseScale * 0.75,
+                            t * 0.15 + ri * 0.3,
+                            0, Math.PI * 2
+                        );
+                        ctx.stroke();
+                        ctx.restore();
+                    }
+
+                    tRef.current += 0.016; // ~60fps time step
+                    animRef.current = requestAnimationFrame(draw);
+                };
+
+                draw();
+
+                return () => {
+                    cancelAnimationFrame(animRef.current);
+                    window.removeEventListener('resize', resize);
+                    clearTimeout(revealTimeout);
+                };
+            }, []);
+
+            return (
+                <div
+                    ref={cardRef}
+                    className={`feature-card ${index === 0 ? 'glass-card-premium' : ''} reveal ${card.delay}`}
+                    style={{
+                        textAlign: 'center',
+                        position: 'relative',
+                        overflow: 'hidden'
+                    }}
+                >
+                    {/* Aurora canvas background */}
+                    <canvas
+                        ref={canvasRef}
+                        style={{
+                            position: 'absolute',
+                            inset: 0,
+                            width: '100%',
+                            height: '100%',
+                            pointerEvents: 'none',
+                            zIndex: 0,
+                            borderRadius: 'inherit'
+                        }}
+                    />
+                    {/* Card content sits above canvas */}
+                    <div style={{ position: 'relative', zIndex: 1 }}>
+                        <div
+                            className="material-symbols-rounded"
+                            style={{ fontSize: '2.5rem', marginBottom: '1rem', color: card.iconColor }}
+                        >
+                            {card.icon}
+                        </div>
+                        <h3 style={{ fontSize: '1rem' }}>{card.title}</h3>
+                        <p style={{ fontSize: '0.85rem' }}>{card.desc}</p>
+                    </div>
+                </div>
+            );
+        };
+
+        const GovernanceCards = () => (
+            <div className="grid-4">
+                {governanceCards.map((card, i) => (
+                    <AuroraCard key={card.icon} card={card} index={i} />
+                ))}
+            </div>
+        );
+
+        const initMount = () => {
+            const mountEl = document.getElementById('governance-cards-mount');
+            if (mountEl) {
+                const root = ReactDOM.createRoot(mountEl);
+                root.render(<GovernanceCards />);
+            } else {
+                // console.error("AuroraCard: Mount element #governance-cards-mount NOT found!");
+            }
+        };
+
+        // Babel standalone executes after the page has likely already loaded.
+        // We check readyState and also use a small delay if needed.
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            initMount();
+        } else {
+            window.addEventListener('load', initMount);
+        }
+    </script>
+</body>
+
+</html>
