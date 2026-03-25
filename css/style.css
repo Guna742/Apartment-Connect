@@ -1630,8 +1630,8 @@ section {
   font-weight: 600;
   cursor: pointer;
   border: none;
-  background: transparent;
-  color: var(--white-60);
+  background: rgba(139, 92, 246, 0.05); /* Very light purple tint */
+  color: var(--text-secondary); /* Darker text for visibility */
   transition: all var(--transition-base);
 }
 
@@ -1642,8 +1642,8 @@ section {
 }
 
 .tab-btn:hover:not(.active) {
-  color: var(--white);
-  background: var(--white-05);
+  color: var(--primary);
+  background: rgba(139, 92, 246, 0.1);
 }
 
 /* ─── MEDIA QUERIES ─── */
@@ -3360,9 +3360,10 @@ section,
 }
 
 .btn-footer.primary:hover {
-  background: var(--white);
+  background: var(--gradient-primary);
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.5);
+  filter: brightness(1.1); /* Subtle glow without flashing white */
 }
 
 .btn-footer.secondary {
