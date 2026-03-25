@@ -445,7 +445,7 @@
 
             return (
                 <div style={{ position: "relative", height: "520px", width: "100%", overflow: "hidden", perspective: "1500px", padding: "40px 0" }} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-                    <div style={{ position: "absolute", top: "50%", left: "50%", width: "340px", height: "380px", transform: "translate(-50%, -50%)", transformStyle: "preserve-3d" }}>
+                    <div style={{ position: "absolute", top: "50%", left: "50%", width: "100%", maxWidth: "340px", height: "380px", transform: "translate(-50%, -50%)", transformStyle: "preserve-3d" }}>
                         <AnimatePresence initial={false}>
                             {featuresData.map((feature, idx) => {
                                 const offset = getOffset(idx);

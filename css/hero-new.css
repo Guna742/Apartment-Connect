@@ -208,3 +208,49 @@
     margin-left: 1rem;
     font-weight: 500;
 }
+
+/* Mobile Responsiveness for Hero */
+@media (max-width: 768px) {
+    .hero-new {
+        padding: 100px 0 60px;
+        min-height: unset;
+    }
+    .floating-element {
+        display: none; /* Hide floating elements on mobile to prevent overlapping */
+    }
+    .hero-new h1 {
+        font-size: 2.1rem;
+    }
+    .hero-new .hero-subtitle {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+    .hero-new .btn-get-started {
+        padding: 0.8rem 1.8rem;
+        font-size: 1rem;
+    }
+    .hero-new .btn-secondary {
+        padding: 0.8rem 1.8rem;
+        font-size: 1rem;
+    }
+    /* Stack buttons nicely if it's too tight */
+    .hero-new .container > div > div:nth-child(5) {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem !important;
+    }
+    .hero-new .container > div > div:nth-child(5) a {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    .user-avatars {
+        flex-wrap: wrap;
+    }
+    .trusted-text {
+        text-align: center;
+        margin-left: 0;
+        margin-top: 0.5rem;
+        width: 100%;
+    }
+}
